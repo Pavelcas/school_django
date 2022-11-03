@@ -1,16 +1,7 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-print('hello i rename tis file')
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def validate(n):
+    n = [int(i) for i in str(n)]
+    for i in range(len(list(reversed(n)))):
+        if i % 2 == 1 and n[i]<9:
+            n[i] = n[i]*2
+    return sum(n)%10 == 0
+print(validate(2121))
